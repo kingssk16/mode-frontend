@@ -8,7 +8,7 @@ export default function Upload() {
     e.preventDefault();
     const formData = new FormData();
     formData.append("file", file);
-    const res = await axios.get("https://mode-backend-sa0c.onrender.com/outfits")
+    const res = await axios.post("http://localhost:5000/upload", formData);
     console.log(res.data);
   };
 
